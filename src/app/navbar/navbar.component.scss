@@ -1,0 +1,86 @@
+.navigation-area {
+    line-height: 4em;
+}
+.header-space {
+    max-width: 1540px;
+    margin: auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding: 1rem 55px;
+    padding-top: 1rem;
+    padding-right: 55px;
+    padding-left: 55px;
+    padding-bottom: 1rem;
+    display: flex;
+    font-size: 1.25rem;
+}
+.logo-space {
+    max-width: 250px;
+    display: flex;
+    flex: 2;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    margin-right: 1rem;
+}
+.right-header-space {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-right-buttons {
+    color: #ffffff;
+}
+.button_ask {
+    color: #FFCE00;
+    font-weight: 700;
+}
+.button-color {
+    background-color: #005596;
+}
+.buttonsPosition {
+    margin-left: 10em;
+}
+.questionnaire {
+    width: 10em;
+}
+
+.navimg {
+    height: 150px;
+}
+
+.navstyle {
+    //text-align: center;
+    vertical-align: middle;
+    background-color: #005596;
+    color: white !important;
+    border-radius: 12px;
+    margin: 0px 12px;
+    padding: 15px 0px;
+    margin-right: 30px;
+    
+}
+.marg{
+    margin-right: 500px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .navimg {
+        height: 50px;
+    }
+    .navstyle {
+        //text-align: center;
+        vertical-align: middle;
+        background-color: white;
+        color: #005596 !important;
+        border-radius: 0;
+        margin: 0px 0px;
+    }
+}

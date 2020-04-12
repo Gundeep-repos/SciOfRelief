@@ -1,0 +1,98 @@
+<div *ngIf="!showRecommendation">
+        <mat-horizontal-stepper>
+                <mat-step>
+                        <ng-template matStepLabel >Stress Level</ng-template>
+                        <app-secon-page></app-secon-page>
+                        <div class="row">
+
+                                <div class="col-sm-2">
+                                        <button mat-button routerLink="/" class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                                >Back</button>
+                                </div>
+
+                                <div class="col-sm-4">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                                >Skip</button>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block"
+                                                style="background-color: #005596;">Next</button>
+                                </div>
+                        </div><br><br>
+                </mat-step>
+                <mat-step>
+                        <ng-template matStepLabel>Life Problems</ng-template>
+                        <app-third-page (thirdPageData)="getThirdPageData($event)"></app-third-page>
+                        <div class="row">
+
+                                <div class="col-sm-2">
+                                        <button mat-button matStepperPrevious class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                                >Back</button>
+                                </div>
+
+                                <div class="col-sm-4">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                                >Skip</button>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block"
+                                                style="background-color: #005596;">Next</button>
+                                </div>
+                        </div><br><br>
+                </mat-step>
+                <mat-step>
+                        <ng-template matStepLabel>Academics</ng-template>
+                        <app-fourth-page (fourthPageData)="getFourthPageData($event)"></app-fourth-page>
+                        <div class="row">
+
+                                <div class="col-sm-2">
+                                        <button mat-button matStepperPrevious class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                                >Back</button>
+                                </div>
+
+                                <div class="col-sm-4">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                                >Skip</button>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block"
+                                                style="background-color: #005596;">Next</button>
+                                </div>
+                        </div><br><br>
+                </mat-step>
+                <mat-step>
+                        <ng-template matStepLabel>Mental health</ng-template>
+                        <app-fifth-page (fifthPageData)="getFifthPageData($event)"></app-fifth-page>
+                        <div class="row">
+
+                                <div class="col-sm-2">
+                                        <button mat-button matStepperPrevious class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                                >Back</button>
+                                </div>
+
+                                <div class="col-sm-4">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block yellowButtons"
+                                               >Skip</button>
+                                </div>
+
+                                <div class="col-sm-6">
+                                        <button mat-button matStepperNext class="btn btn-secondary btn-lg btn-block"
+                                                (click)="showRecommendations()" style="background-color: #005596;" [disabled]='disableRecommendationButton'>Show
+                                                Recommendations</button>
+                                </div>
+                        </div><br><br>
+                </mat-step>
+        </mat-horizontal-stepper>
+</div>
+<div *ngIf="showRecommendation">
+        <app-recommendation-screen [lifeProblemsData]="lifeProblemsData" [academicsData]="academicsData"
+                [mentalHealthData]="mentalHealthData"></app-recommendation-screen>
+</div>
+<br>
+<br>

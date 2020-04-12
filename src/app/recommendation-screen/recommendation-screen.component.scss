@@ -1,0 +1,38 @@
+.hide {
+    display: none;
+}
+.showButton {
+    background-color: #005596;
+    color: #ffffff;
+    padding: 0 1.5rem;
+    margin: 0 0 0 1rem;
+    line-height: 3rem;
+    padding-top: 0px;
+    padding-right: 1.5rem;
+    padding-bottom: 0px;
+    padding-left: 1.5rem;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.recommendationHeader {
+    font-family: "angelinaregular" !important;
+    color: #005596;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 50px;
+    padding: 0em;
+}
+.fontSize {
+    font-size: 1.5rem;
+    word-break: break-all;
+}
+.saveButtonColor {
+    color: #005596;
+}
+@media only screen and (max-width: 500px) {
+    .alginMobile {
+        margin-top: 2em;
+    }
+}

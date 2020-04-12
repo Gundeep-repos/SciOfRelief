@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center" style="color: #FFCE00;">Demographics</h1><br>
+
+
+
+        <div>
+            <h4 style="color: #005596;">What is your current program(s) of study?</h4>
+            <select style="width: 38% ; height: 40px;" [(ngModel)]="programSelected" name="program">
+                <option value="Behaviour, Cognition, Neuroscience">Behaviour, Cognition, Neuroscience</option>
+                <option value="Biological Sciences">Biological Sciences</option>
+                <option value="Chemistry and Biochemistry">Chemistry and Biochemistry</option>
+                <option value="Computer science">Computer science</option>
+                <option value="Environment">Environment</option>
+                <option value="Economics">Economics</option>
+                <option value="Forensic Science">Forensic Science</option>
+                <option value="General Science">General Science</option>
+                <option value="Health and Biomedical Sciences">Health and Biomedical Sciences</option>
+                <option value="Mathematics and Statistics">Mathematics and Statistics</option>
+                <option value="Physics">Physics</option>
+                <option value="GLIER">GLIER</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+        </div><br>
+
+        <div>
+            <h4 style="color: #005596;">What is your current level of study?</h4>
+            <select style="width: 32%; height: 40px;" [(ngModel)]="levelSelected" name="levelOfStudy">
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduate">Graduate</option>
+                <option value="PhD">PhD</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+        </div><br>
+
+        <div>
+            <h4 style="color: #005596;">What is your year of study?</h4>
+            <select style="width: 24.5%; height: 40px;" name="yearOfStudy" class="form-controll"
+                [(ngModel)]="yearSelected">
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                <option value="5">5th</option>
+
+            </select>
+        </div><br>
+        <h4 class="text-justify" style="color: #005596;">What is your sex?</h4>
+        <div class="form-check form-check-inline" *ngFor="let gender of genders">
+            <label class="container">
+                <input type="radio" name="gender" [(ngModel)]="genderSelected" [value]="gender" #gdr="ngModel">
+                &nbsp;{{ gender }}&nbsp;&nbsp;
+                <span class="checkmark"></span>
+            </label>
+
+        </div>
+        <br><br>
+        <div>
+            <h4 style="color: #005596;">What is your Sexual Orientation?</h4>
+            <div class="form-check form-check-inline" *ngFor="let so of sexualorientation">
+                <label class="container">
+                    <input type="radio" name="sexualOrientation" [(ngModel)]="orientationSelected"
+                        [value]="so">&nbsp;{{ so }}&nbsp;&nbsp;
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div><br>
+        <div>
+            <h4 style="color: #005596;">Are you an International Student?</h4>
+            <div class="form-check form-check-inline" *ngFor="let st of studenttype">
+                <label class="container">
+                    <input type="radio" name="studentType" [(ngModel)]="studentTypeSelected"
+                        [value]="st">&nbsp;{{ st }}&nbsp;&nbsp;
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div><br>
+    </div>
+    <div>

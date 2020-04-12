@@ -1,0 +1,34 @@
+<h1>Sci of Relief Agent</h1>
+<div #content class="container overflow">
+  <ng-container #messageList *ngFor="let message of messagesToDisplay">
+
+    
+      <div *ngIf="(message.content !== '')" class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+      'to':   message.sentBy === 'user' }">
+        <p [innerHTML]="message.content"></p>
+      </div>
+    
+
+
+  </ng-container>
+</div>
+
+<label>
+<input class="textBox" [(ngModel)]="formValue" (keyup.enter)="sendMessage()" placeholder="Your message here..."
+  type="text">
+
+<button mat-button class="buttonLayout" (click)="sendMessage()">Send</button>
+
+</label>
+<br>
+<br>
+<span>
+  <h3>
+  <strong>If you have additional questions or concern</strong>    
+  </h3>
+</span>
+<p>
+  Please contact the Student Counselling Centre for personal issues <strong>(scc@uwindsor.ca, 519-253-3000x4616, CAW room 293)</strong> or the Dean's office for academic issues <strong>(science@uwindsor.ca, 519-253-3000x3009)</strong>
+</p>
+<br>
+<br>

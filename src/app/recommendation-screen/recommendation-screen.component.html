@@ -1,0 +1,33 @@
+<div *ngIf="recommendationList.length > 0" class="recommendationHeader">
+    <span>You can use all or any one of the following recommendations!</span>
+    <br>
+    <br>
+</div>
+<div *ngIf="recommendationList.length == 0" class="recommendationHeader">
+    <span>No Recommendations to display, Please select a valid option in the questionnaire!</span>
+    <br>
+    <br>
+</div>
+<div id="recommendations" class="fontSize">
+    <ul>
+        <ng-container *ngFor="let recom of recommendationList">
+            <li [ngClass]="{ 'hide': recom.hidden }">
+                <p [innerHTML]="recom.description"></p>
+            </li>
+        </ng-container>
+
+    </ul>
+</div>
+<button *ngIf="showButton" mat-button class="showButton" (click)="toggle()">{{showMore}}</button>
+<br>
+<br>
+<div>
+    <button *ngIf="recommendationList.length > 0" mat-button  class="showButton" (click)="saveAsPdf()">Save as PDF</button>
+    <button *ngIf="recommendationList.length > 0" mat-button  class="showButton alginMobile" (click) = "onNavigate()">Please give us a feedback</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

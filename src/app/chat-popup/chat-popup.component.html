@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+</head>
+
+<body>
+  <div class="chat_box">
+    <div class="chat_header">
+      <h4 class="username">Chatbot</h4>
+    </div>
+    <hr />
+    <div class="slideOnClick">
+      <div #content class="message_content">
+        <ng-container #messageList *ngFor="let message of messagesToDisplay">
+
+          <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                                'to':   message.sentBy === 'user' }">
+          <p [innerHTML]="message.content"></p>
+          </div>
+
+        </ng-container>
+      </div>
+      <div class="input_box">
+        <label class="hideLabel">
+        <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" placeholder="Your message here..." type="text" />
+        <button mat-button class="buttonLayout" (click)="sendMessage()">Send</button>
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

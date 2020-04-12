@@ -1,0 +1,179 @@
+<h1 class="text-center headerLabel" >Life Problems</h1>
+<div style="color: #005596;">
+    <h2>How much do the following issues contribute to your stress?</h2>
+</div><br>
+<div>
+
+    <li class="h4" style="color: #005596;">Housing Problem</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="houseProb" [(ngModel)]="houseProb" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div>
+
+    <div *ngIf="houseProb == '2 = quite a bit' || houseProb == '3 = extremely' ">
+        <br>
+        <label class="h4" style="color: #005596;">Do you live in residence or off campus?</label><br>
+        <select name="houseProb2" style="width: 100%; height:40px;" [(ngModel)]="houseProb2" (change)='nextClicked()' required>
+            <option value="In Residence">In Residence</option>
+            <option value="Off-Campus">Off-Campus</option>
+        </select>
+    </div><br><br>
+
+    <li class="h4" style="color: #005596;">Legal Issues</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="legalIssue" [(ngModel)]="legalIssue" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br><br>
+
+    <li class="h4" style="color: #005596;">Financial Problems</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="financialProb" [(ngModel)]="financialProb" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br><br>
+
+
+    <li class="h4" style="color: #005596;">Interpersonal problems (e.g., parents, other family members, friends,
+        roommates, significant other, own children, classmates, labmates, teammates)</li>
+
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="interPersonal" [(ngModel)]="interPersonal" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div>
+
+    <div *ngIf="interPersonal == '2 = quite a bit' || interPersonal == '3 = extremely'">
+        <br>
+        <label class="h4" style="color: #005596;">Do you prefer to talk to someone about this issue on campus, off
+            campus, over the phone or over the web (please select all that apply)?</label><br>
+        <select name="interPersonal2" style="width: 100%; height:40px;" [(ngModel)]="interPersonal2"
+            (change)='nextClicked()'>
+            <option value="On campus">On campus</option>
+            <option value="Off-Campus">Off-Campus</option>
+            <option value="Over the phone">Over the phone</option>
+            <option value="Over the web">Over the web</option>
+        </select>
+    </div><br><br>
+    <li class="h4" style="color: #005596;">Sexual assault, abuse or harassment</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="sexualAbuse" [(ngModel)]="sexualAbuse" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div *ngIf=" sexualAbuse == '2 = quite a bit' || sexualAbuse == '3 = extremely' ">
+        <br>
+        <label class="h4" style="color: #005596;">Do you wish to report this?</label><br>
+        <select [(ngModel)]="sexualAbuse2" name="sexualAbuse2" style="width: 100%; height:40px;"
+            (change)='nextClicked()'>
+            <option>Yes</option>
+            <option>No</option>
+        </select><br>
+    </div>
+    <div *ngIf="sexualAbuse2 == 'No'">
+        <label class="h4" style="color: #005596;">Do you prefer to talk to someone about this issue on campus, off
+            campus, over the phone or over the web (please select all that apply)?</label><br>
+        <select name="sexualAbuse3" style="width: 100%; height: 40px;" [(ngModel)]="sexualAbuse3"
+            (change)='nextClicked()'>
+            <option value="On campus">On campus</option>
+            <option value="Off-Campus">Off-Campus</option>
+            <option value="Over the phone">Over the phone</option>
+            <option value="Over the web">Over the web</option>
+        </select>
+    </div><br><br>
+    <li class="h4" style="color: #005596;">Physical assault, abuse or threat</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="physicalAbuse" [(ngModel)]="physicalAbuse" [value]="n"
+                (click)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br>
+    <div *ngIf=" physicalAbuse == '2 = quite a bit' || physicalAbuse == '3 = extremely' ">
+        <br>
+        <label class="h4" style="color: #005596;">Do you wish to report this?</label><br>
+        <select [(ngModel)]="physicalAbuse2" name="physicalAbuse2" style="width: 100%; height:40px;"
+            (change)='nextClicked()'>
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+    </div>
+    <div *ngIf="physicalAbuse2 == 'No'">
+        <label class="h4" style="color: #005596;">Do you prefer to talk to someone about this issue on campus, off
+            campus, over the phone or over the web (please select all that apply)?</label><br>
+        <select style="width: 100%; height: 40px;" name="physicalAbuse3" [(ngModel)]="physicalAbuse3"
+            (change)='nextClicked()'>
+            <option value="On campus">On campus</option>
+            <option value="Off-Campus">Off-Campus</option>
+            <option value="Over the phone">Over the phone</option>
+            <option value="Over the web">Over the web</option>
+        </select>
+    </div><br>
+    <li class="h4" style="color: #005596;">Grief/loss</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="griefLoss" [(ngModel)]="griefLoss" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }}&nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br>
+    <div *ngIf="griefLoss == '2 = quite a bit' || griefLoss == '3 = extremely'">
+        <br>
+        <label class="h4" style="color: #005596;">Do you prefer to talk to someone about this issue on campus, off
+            campus, over the phone or over the web (please select all that apply)?</label><br>
+        <select style="width: 100%; height: 40px;" name="griefLoss2" [(ngModel)]="griefLoss2"
+            (change)='nextClicked()'>
+            <option value="On campus">On campus</option>
+            <option value="Off-Campus">Off-Campus</option>
+            <option value="Over the phone">Over the phone</option>
+            <option value="Over the web">Over the web</option>
+        </select>
+    </div><br>
+    <li class="h4" style="color: #005596;">Personal health issues</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="personalHealthIssues" [(ngModel)]="phIssues" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }}&nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br><br>
+
+    <li class="h4" style="color: #005596;">Discrimination (based on sexual orientation, gender, race, ability, etc.)
+    </li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="discriminationProblem" [(ngModel)]="dProb" [value]="n" (change)="nextClicked()">&nbsp;{{ n }}&nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br><br>
+
+    <li class="h4" style="color: #005596;">Getting food</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="foodProblem" [(ngModel)]="foodProb" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }}&nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br><br>
+
+    <li class="h4" style="color: #005596;">Getting around town</li>
+    <div class="form-check form-check-inline" *ngFor="let n of numb">
+        <label class="container">
+            <input type="radio" name="townProblem" [(ngModel)]="townProb" [value]="n"
+                (change)="nextClicked()">&nbsp;{{ n }}&nbsp;&nbsp;
+            <span class="checkmark"></span>
+        </label>
+    </div><br><br>
+    <br>
+</div>

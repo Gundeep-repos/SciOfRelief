@@ -1,0 +1,52 @@
+<h1 class="text-center headerLabel" >Academics Problems</h1>
+<div style="color: #005596;">
+  <h2>How much do the following issues contribute to your stress?</h2>
+</div>
+<br>
+<div>
+
+  <li class="h4" style="color: #005596;">Anxiety about your current program and/or future career</li>
+  <div class="form-check form-check-inline" *ngFor="let n of numb">
+    <label class="container">
+      <input type="radio" name="anxietyProblem" [(ngModel)]="anxietyProblem" [value]="n"
+        (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+      <span class="checkmark"></span>
+    </label>
+  </div><br><br>
+
+  <li class="h4" style="color: #005596;">Academic workload/time management</li>
+  <div class="form-check form-check-inline" *ngFor="let n of numb">
+    <label class="container">
+      <input type="radio" name="workloadProblem" [(ngModel)]="workloadProblem" [value]="n"
+        (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+      <span class="checkmark"></span>
+    </label>
+  </div><br><br>
+
+  <li class="h4" style="color: #005596;">Grades</li>
+  <div class="form-check form-check-inline" *ngFor="let n of numb">
+    <label class="container">
+      <input type="radio" name="gradesProblem" [(ngModel)]="gradesProblem" [value]="n"
+        (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+      <span class="checkmark"></span>
+    </label>
+  </div><br><br>
+
+  <li class="h4" style="color: #005596;">Problems with professors, staff or GAs/TAs</li>
+  <div class="form-check form-check-inline" *ngFor="let n of numb">
+    <label class="container">
+      <input type="radio" name="staffProblem" [(ngModel)]="staffProblem" [value]="n"
+        (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+      <span class="checkmark"></span>
+    </label>
+  </div><br><br>
+
+  <li class="h4" style="color: #005596;">Anxiety about getting in to graduate school or professional school</li>
+  <div class="form-check form-check-inline" *ngFor="let n of numb">
+    <label class="container">
+      <input type="radio" name="anxietySchool" [(ngModel)]="anxietySchool" [value]="n"
+        (change)="nextClicked()">&nbsp;{{ n }} &nbsp;&nbsp;
+      <span class="checkmark"></span>
+    </label>
+  </div><br><br>
+</div>

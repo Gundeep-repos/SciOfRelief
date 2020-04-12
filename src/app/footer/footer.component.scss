@@ -1,0 +1,91 @@
+.footer-shield {
+    width: 80px;
+    margin-top: -85px;
+}
+.emergency-services {
+    margin-top: 1.25em;
+    span {
+        color: #58585B;
+        font-weight: 700;
+        font-size: 1em;
+        padding: 0.4em 0;
+        letter-spacing: 0.05em;
+        line-height: 1.75em;
+        padding-top: 0.4em;
+        padding-right: 0px;
+        padding-bottom: 0.4em;
+        padding-left: 0px;
+    }
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background: #58585B;
+    color: #aaa;
+    padding-top: 10px;
+  }
+  
+  footer a {
+    color: white;
+  }
+  
+  footer a:hover {
+    color: #fff;
+  }
+  
+  footer h3 {
+   color: #0894d1;
+    letter-spacing: 1px;
+    margin: 30px 0 20px;
+  }
+  
+  footer .three-column {
+   overflow: hidden;
+  }
+  
+  footer .three-column li{
+   width: 33.3333%;
+    float: left;
+    padding: 5px 0;
+  }
+  
+  footer .socila-list {
+    overflow: hidden;
+    margin-left: 7em;
+    margin-top: 2em;
+  }
+  
+  footer .socila-list li {
+    float: left;
+    margin-left: 5px;
+    overflow: hidden;
+  }
+  
+  footer .socila-list li:hover {
+    opacity: 1;
+  }
+  
+  footer .img-thumbnail {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+    margin-bottom: 5px;
+  }
+  
+  footer .copyright {
+    padding: 15px 0;
+    background: #58585B;
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: row;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  footer .copyright span {
+    color: #0894d1;
+  }
